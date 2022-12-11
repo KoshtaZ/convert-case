@@ -1,6 +1,6 @@
 package main;
 
-import model.Text;
+import model.Case;
 
 import java.util.Scanner;
 
@@ -8,23 +8,31 @@ public class App {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
+        Case converter = new Case();
 
-        Text conversor = new Text();
-        System.out.println("Informe o seu texto");
-        String text = scan.nextLine();
+        System.out.println("Informe o seu texto: ");
+        String string = scan.nextLine();
 
-
-        System.out.print("O que deseja fazer: ");
+        System.out.println("O que deseja fazer, escolha uma das opcoes abaixo: ");
+        System.out.println("1: Minuscula");
+        System.out.println("2: Maiscula");
+        System.out.println("3: Titulo Case");
+        System.out.println("4: Camel case");
+        System.out.println("4: AlTeRnAdO");
         int choose = scan.nextInt();
-        switch (choose){
 
-            case 1 : conversor = new Text(text);
-                     System.out.println(conversor.toLowerCase(text));
-                     break;
-           case 2 :  conversor = new Text(conversor.toUpperCase(text));
-                System.out.println(conversor.toUpperCase(text));
+        switch (choose){
+            case 1:
+                System.out.println(converter.toLowerCase(string));
+                break;
+            case 2:
+                System.out.println(converter.toUpperCase(string));
+                break;
+            case 3:
+                System.out.println(converter.CamelCase(string));
+
             default:
-                System.out.println("Opção invalida!");
+                System.out.println("Opção inválida");
         }
 
 
