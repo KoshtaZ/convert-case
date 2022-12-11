@@ -16,9 +16,9 @@ public class App {
         System.out.println("O que deseja fazer, escolha uma das opcoes abaixo: ");
         System.out.println("1: Minuscula");
         System.out.println("2: Maiscula");
-        System.out.println("3: Titulo Case");
-        System.out.println("4: Camel case");
-        System.out.println("4: AlTeRnAdO");
+        System.out.println("3: Camel case");
+        System.out.println("4: Titulo Case");
+        System.out.println("5: AlTeRnAdO");
         int choose = scan.nextInt();
 
         switch (choose){
